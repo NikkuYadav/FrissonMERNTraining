@@ -1,1 +1,1 @@
-// Encription Decription Using MD5 
+// MD5 Hash Function using Hashify API
