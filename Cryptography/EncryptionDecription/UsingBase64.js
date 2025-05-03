@@ -1,10 +1,5 @@
 // Encryption Decryption Using Base64
 
-const secret = "l02rmIJnnf0u";
-// Test Data
-const text = "Hello JavaScript Users"
-const base64String = "SGVsbG8gSmF2YVNjcmlwdCBVc2Vycw=="
-
 
 // Function to Encode Simple text to Base64 String 
 const encodeFunction = async (text, secret) => {
@@ -56,9 +51,9 @@ const decodeFunction = async (base64String, secret) => {
 const authenticateFunction = async (textInput, storedBase64Text, secret) => {
     try {
         // First Encode the textInput 
-        const encodedTextInput = await encodeFunction(textInput, secret)
-        // it returns boolean value
-        return encodedTextInput === storedBase64Text;
+        const decodedTextInput = await decodeFunction(storedBase64Text, secret)
+        // then returns boolean value
+        return decodedTextInput === textInput;
 
     } catch (error) {
         console.error("Authentication Error:", error.message);
@@ -67,6 +62,12 @@ const authenticateFunction = async (textInput, storedBase64Text, secret) => {
 }
 
 // Test the Authenticate Function 
+
+const secret = "l02rmIJnnf0u";
+// Test Data
+const text = "Hello JavaScript Users"
+const base64String = "SGVsbG8gSmF2YVNjcmlwdCBVc2Vycw=="
+
 const isMatched = authenticateFunction(text, base64String, secret);
 console.log(isMatched ? "Authentication Successful" : "Authentication Failed");
 
