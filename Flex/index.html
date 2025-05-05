@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Meet Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+    <button class="toggle-sidebar">
+        <i class="fa-solid fa-users"></i>
+    </button>
+    <div class="sidebar-overlay"></div>
+
+    <div class="app">
+        <div class="top_section">
+
+            <!-- Left part -->
+            <div class="vertical_division">
+                <span class="top_icon"><i class="fa-solid fa-gas-pump"></i></span>
+                <div class="main-center">
+                    <div class="mike">
+                        <div><i class="fa-solid fa-microphone-slash"></i></div>
+
+                    </div>
+                    <div class="user-avatar">
+                        <img src="https://sharedp.com/wp-content/uploads/2024/05/boy-mask-photo-920x1024.jpg"
+                            alt="User" />
+                    </div>
+                    <div class="user-detail">
+                        <div class="user-name">Nitish Yadav</div>
+                        <div class="round-box">
+                            <img src="https://sharedp.com/wp-content/uploads/2024/05/boy-mask-photo-920x1024.jpg"
+                                alt="User" />
+                            <p>Nitish Yadav</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- People panel Right Part -->
+            <div class="people-panel">
+                <div class="people-panel-top">
+                    <p>People</p>
+                    <span class="close-sidebar"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for people" />
+                </div>
+                <div class="participants-title">IN THE MEETING</div>
+                <div class="participant-list">
+                    <div class="participant-list-top">
+                        <p>Contributors</p>
+                        <div class="participant_list_right">
+                            <p>19</p>
+                            <span><i class="fa-solid fa-angle-up"></i></span>
+                        </div>
+                    </div>
+                    <div class="participant">
+                        <div class="participant_details">
+                            <img src="https://sharedp.com/wp-content/uploads/2024/05/boy-mask-photo-920x1024.jpg"
+                                alt="User" />
+                            <p>Nitish Yadav</p>
+                        </div>
+                        <div class="participant_right">
+                            <span class="open_mike"><i class="fa-solid fa-ellipsis"></i></span>
+                            <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                        </div>
+                    </div>
+                    <div class="participant">
+                        <div class="participant_details">
+                            <img src="https://sharedp.com/wp-content/uploads/2024/05/boy-mask-photo-920x1024.jpg"
+                                alt="User" />
+                            <p>Kapil Sharma</p>
+                        </div>
+                        <div class="participant_right">
+                            <span><i class="fa-solid fa-microphone-slash"></i></span>
+                            <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                        </div>
+                    </div>
+                    <div class="participant">
+                        <div class="participant_details">
+                            <img src="https://sharedp.com/wp-content/uploads/2024/05/boy-mask-photo-920x1024.jpg"
+                                alt="User" />
+                            <p>Karan Singh</p>
+                        </div>
+                        <div class="participant_right">
+                            <span><i class="fa-solid fa-microphone-slash"></i></span>
+                            <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                        </div>
+                    </div>
+                    <div class="participant">
+                        <div class="participant_details">
+                            <img src="https://sharedp.com/wp-content/uploads/2024/05/boy-mask-photo-920x1024.jpg"
+                                alt="User" />
+                            <p>Sasmita</p>
+                        </div>
+                        <div class="participant_right">
+                            <span><i class="fa-solid fa-microphone-slash"></i></span>
+                            <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Bottom Section -->
+        <div class="bottom_section">
+            <div class="reactions">
+                ❤️ 🎉 👍 👏 😂 😮 😢 👎
+            </div>
+            <div class="controls-data">
+                <div class="meeting-id">12:49 | fzo-xhja-zem</div>
+                <div class="controls">
+                    <button><i class="fa-solid fa-microphone"></i></button>
+                    <button><i class="fa-solid fa-video-slash"></i></button>
+                    <button><i class="fa-regular fa-closed-captioning"></i></button>
+                    <button><i class="fa-sharp fa-regular fa-face-smile"></i></button>
+                    <button><i class="fa-solid fa-laptop-medical"></i></button>
+                    <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    <button class="end-call"><i class="fa-solid fa-phone"></i></button>
+                </div>
+                <div class="controls">
+                    <button><i class="fa-solid fa-circle-info"></i></button>
+                    <button><i class="fa-solid fa-users"></i></button>
+                    <button><i class="fa-solid fa-message"></i></button>
+                    <button><i class="fa-regular fa-circle-dot"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const toggleBtn = document.querySelector(".toggle-sidebar");
+        const sidebar = document.querySelector(".people-panel");
+        const closeBtn = document.querySelector(".close-sidebar");
+        const overlay = document.querySelector(".sidebar-overlay");
+
+        toggleBtn.addEventListener("click", () => {
+            sidebar.classList.add("show");
+            overlay.classList.add("show");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            sidebar.classList.remove("show");
+            overlay.classList.remove("show");
+        });
+
+        overlay.addEventListener("click", () => {
+            sidebar.classList.remove("show");
+            overlay.classList.remove("show");
+        });
+    </script>
+
+
+
+</body>
+
+</html>
