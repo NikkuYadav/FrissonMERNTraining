@@ -1,7 +1,6 @@
 # Frission Devhub Training Assignment Repository 
 
-<br> 
-Assignment 1 
+**Assignment 1**
 <br> 
 Implement password comparison using functions with these algorithms:
 <br>
@@ -11,8 +10,8 @@ Each should have:
  A function to encode/hash the password
 And it should compare the password also
 
-<br> 
-Assignment 2
+
+**Assignment 2**
 <br>
 Google meet UI using HTML / CSS Flexbox
 
