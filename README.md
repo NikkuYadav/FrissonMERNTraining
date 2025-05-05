@@ -15,5 +15,5 @@ And it should compare the password also
 Assignment 2
 <br>
 Google meet UI using HTML / CSS Flexbox
-<br>
-**Site Live Link**-  https://googlemeetflex.netlify.app/
+
+**Site Live Link**  https://googlemeetflex.netlify.app/
