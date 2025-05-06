@@ -98,7 +98,7 @@ body {
 
 .vertical_division .main-center .user-detail .round-box p {
     font-size: 12px;
-
+    margin-left: 20%;
 }
 
 /* Sidebar Section */
@@ -156,6 +156,17 @@ body {
 .participant_list_right {
     display: flex;
     gap: 20px;
+}
+
+.participant-items {
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
+
+.participant-items.hidden {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .participant {
@@ -289,7 +300,7 @@ body {
     }
   
     .user-detail {
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
       gap: 10px;
     }

@@ -60,10 +60,57 @@
                         <p>Contributors</p>
                         <div class="participant_list_right">
                             <p>19</p>
-                            <span><i class="fa-solid fa-angle-up"></i></span>
+                            <span class="toggle-participants"><i class="fa-solid fa-angle-up"></i></span>
                         </div>
                     </div>
-                    <div class="participant">
+                    <div class="participant-items">
+                        <div class="participant">
+                            <div class="participant_details">
+                                <img src="https://sharedp.com/wp-content/uploads/2024/05/boy-mask-photo-920x1024.jpg"
+                                    alt="User" />
+                                <p>Nitish Yadav</p>
+                            </div>
+                            <div class="participant_right">
+                                <span class="open_mike"><i class="fa-solid fa-ellipsis"></i></span>
+                                <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                            </div>
+                        </div>
+                        <div class="participant">
+                            <div class="participant_details">
+                                <img src="https://sharedp.com/wp-content/uploads/2024/05/boy-mask-photo-920x1024.jpg"
+                                    alt="User" />
+                                <p>Kapil Sharma</p>
+                            </div>
+                            <div class="participant_right">
+                                <span><i class="fa-solid fa-microphone-slash"></i></span>
+                                <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                            </div>
+                        </div>
+                        <div class="participant">
+                            <div class="participant_details">
+                                <img src="https://sharedp.com/wp-content/uploads/2024/05/boy-mask-photo-920x1024.jpg"
+                                    alt="User" />
+                                <p>Karan Singh</p>
+                            </div>
+                            <div class="participant_right">
+                                <span><i class="fa-solid fa-microphone-slash"></i></span>
+                                <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                            </div>
+                        </div>
+                        <div class="participant">
+                            <div class="participant_details">
+                                <img src="https://sharedp.com/wp-content/uploads/2024/05/boy-mask-photo-920x1024.jpg"
+                                    alt="User" />
+                                <p>Sasmita</p>
+                            </div>
+                            <div class="participant_right">
+                                <span><i class="fa-solid fa-microphone-slash"></i></span>
+                                <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- <div class="participant">
                         <div class="participant_details">
                             <img src="https://sharedp.com/wp-content/uploads/2024/05/boy-mask-photo-920x1024.jpg"
                                 alt="User" />
@@ -106,7 +153,7 @@
                             <span><i class="fa-solid fa-microphone-slash"></i></span>
                             <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
@@ -147,6 +194,11 @@
         const closeBtn = document.querySelector(".close-sidebar");
         const overlay = document.querySelector(".sidebar-overlay");
 
+        // for toggle of participant
+        const toggleParticipantsBtn = document.querySelector(".toggle-participants");
+        const participantItems = document.querySelector(".participant-items");
+        const toggleIcon = toggleParticipantsBtn.querySelector("i");
+
         toggleBtn.addEventListener("click", () => {
             sidebar.classList.add("show");
             overlay.classList.add("show");
@@ -160,6 +212,19 @@
         overlay.addEventListener("click", () => {
             sidebar.classList.remove("show");
             overlay.classList.remove("show");
+        });
+
+        toggleParticipantsBtn.addEventListener("click", () => {
+            participantItems.classList.toggle("hidden");
+
+            // Toggle the icon between up and down
+            if (toggleIcon.classList.contains("fa-angle-up")) {
+                toggleIcon.classList.remove("fa-angle-up");
+                toggleIcon.classList.add("fa-angle-down");
+            } else {
+                toggleIcon.classList.remove("fa-angle-down");
+                toggleIcon.classList.add("fa-angle-up");
+            }
         });
     </script>
 
